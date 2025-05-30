@@ -1,0 +1,11 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:  row wrap;
+}
+
+@mixin sticky {
+    position: sticky;
+    top: 0;
+}
