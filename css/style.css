@@ -1,3 +1,14 @@
+h2 {
+  color: #C1C1C1;
+  font-style: oblique;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  color: #FFFFFF;
+}
+
 nav {
   width: 100vw;
   height: 10vh;
@@ -13,7 +24,6 @@ nav {
 .layout-navbar .layout-menu {
   width: 100%;
   height: 10vh;
-  background-color: #3498db;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -48,6 +58,8 @@ section {
 .section-landing-page {
   width: 100vw;
   height: fit-content;
+  background-color: #0d0f24;
+  background: linear-gradient(to bottom, #0d0f24, #2e1654);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -56,7 +68,6 @@ section {
 .section-landing-page .layout-profile-summary {
   width: 50%;
   height: 90vh;
-  background-color: #2ecc71;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +76,6 @@ section {
 .section-landing-page .layout-cv-summary {
   width: 50%;
   height: fit-content;
-  background-color: #3498db;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
@@ -75,7 +85,6 @@ section {
 .section-landing-page .layout-cv-summary .cv-summary-item {
   width: 90%;
   height: 30vh;
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;

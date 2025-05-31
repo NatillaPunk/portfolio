@@ -1,6 +1,7 @@
 // Utility Imports
 @use 'mixins';
 @use 'variables';
+@use 'font';
 
 // Layout Imports
 @use 'navbar';
@@ -38,14 +39,13 @@ section {
 
     width: 100vw;
     height: fit-content;
-
+    @include mixins.gradient(to bottom, variables.$background-primary-color, variables.$background-secondary-color);
     @include mixins.flex-left-top;
 
     .layout-profile-summary {
         width: 50%;
         height: 90vh;
         ;
-        background-color: variables.$secondary-color;
         
         @include mixins.flex-center;
         
@@ -54,14 +54,12 @@ section {
     .layout-cv-summary{
         width: 50%; 
         height: fit-content;
-        background-color: variables.$primary-color;
         overflow-x: hidden;
         @include mixins.flex-center;
 
         .cv-summary-item {
             width: 90%;
             height: 30vh;
-            background-color: red;
             @include mixins.flex-center;
 
             * {
