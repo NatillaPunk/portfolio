@@ -15,12 +15,24 @@
     color: variables.$text-secondary-color;
 }
 
+@mixin nav-text {
+    color: variables.$text-secondary-color;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 
 h2 {
     @include text-important;
 }
 
 p {
+    @include text-secondary;
+}
+
+li{
     @include text-secondary;
 }
 
