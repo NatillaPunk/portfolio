@@ -1,0 +1,38 @@
+@use 'variables';
+
+//Font and text styles
+
+
+@mixin text-important {
+    color: variables.$text-primary-color;
+    font-style: oblique;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+@mixin text-secondary {
+    color: variables.$text-secondary-color;
+}
+
+@mixin nav-text {
+    color: variables.$text-secondary-color;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+h2 {
+    @include text-important;
+}
+
+p {
+    @include text-secondary;
+}
+
+li{
+    @include text-secondary;
+}
+

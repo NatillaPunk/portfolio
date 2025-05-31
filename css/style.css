@@ -1,21 +1,56 @@
-.layout-navbar {
+h2 {
+  color: #C1C1C1;
+  font-style: oblique;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+li {
+  color: #FFFFFF;
+}
+
+nav {
   width: 100vw;
   height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+}
+
+.layout-navbar {
+  width: 100vw;
+  height: fit-content;
+  z-index: 1000;
   position: sticky;
   top: 0;
 }
 .layout-navbar .layout-menu {
   width: 100%;
-  height: 10vh;
-  background-color: #3498db;
+  height: 18vh;
+  background-color: #1B0B47;
+  background: linear-gradient(to bottom, #1B0B47, #190F34);
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-flow: row wrap;
+}
+.layout-navbar .layout-menu ul {
+  width: 60vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.layout-navbar .layout-menu ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 * {
@@ -37,28 +72,30 @@ section {
 }
 
 .section-2 {
-  height: 200vh;
+  height: 50vh;
 }
 
 .section-landing-page {
+  width: 100vw;
+  height: fit-content;
+  background-color: #0d0f24;
+  background: linear-gradient(to bottom, #0d0f24, #2e1654);
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-flow: row wrap;
 }
 .section-landing-page .layout-profile-summary {
   width: 50%;
   height: 90vh;
-  background-color: #2ecc71;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  position: sticky;
-  top: 0;
 }
 .section-landing-page .layout-cv-summary {
   width: 50%;
   height: fit-content;
-  background-color: #3498db;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
@@ -66,9 +103,16 @@ section {
   flex-flow: row wrap;
 }
 .section-landing-page .layout-cv-summary .cv-summary-item {
-  width: 100%;
+  width: 90%;
   height: 30vh;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.section-landing-page .layout-cv-summary .cv-summary-item * {
+  width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
