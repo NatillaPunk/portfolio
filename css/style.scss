@@ -26,7 +26,7 @@ section {
 
 //---------------------------------------------------------------------------------------
 .section-2{
-    height: 200vh;
+    height: 50vh;
 }
 
 
@@ -36,17 +36,20 @@ section {
 .section-landing-page{
     // @include mixins.flex-center;
 
-    display: flex;
-    flex-flow: row wrap;
+    width: 100vw;
+    height: fit-content;
+
+    @include mixins.flex-left-top;
 
     .layout-profile-summary {
         width: 50%;
         height: 90vh;
         background-color: variables.$secondary-color;
-        @include mixins.flex-center;
-        @include mixins.sticky;
+        
+        @include mixins.flex-left-top;
         
     }
+    
     .layout-cv-summary{
         width: 50%; 
         height: fit-content;
@@ -62,3 +65,5 @@ section {
         }
     }
 }
+
+
