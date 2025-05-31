@@ -25,6 +25,10 @@ nav {
         
         
         @include mixins.flex-right-center;
+
+        ul{
+            list-style: none;
+        }
         
     }
 
