@@ -45,6 +45,7 @@ section {
         background-color: variables.$secondary-color;
         @include mixins.flex-center;
         @include mixins.sticky;
+        
     }
     .layout-cv-summary{
         width: 50%; 

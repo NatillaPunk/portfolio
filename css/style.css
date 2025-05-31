@@ -1,9 +1,12 @@
 .layout-navbar {
   width: 100vw;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  position: sticky;
+  top: 0;
 }
 .layout-navbar .layout-menu {
   width: 100%;
