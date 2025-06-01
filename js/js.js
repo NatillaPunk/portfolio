@@ -20,10 +20,10 @@ document.querySelector('.layout-navbar').addEventListener('click', function(Even
                 behavior: 'smooth'
             });
             break;
-        case 'navLinkAbout':
-            console.log("About clicked");
+        case 'navLinkSkills':
+            console.log("Skills clicked");
             window.scrollTo({
-                top: document.getElementById('about-section').offsetTop - nav_size,
+                top: document.getElementById('skills-section').offsetTop - nav_size,
                 behavior: 'smooth'
             });
             break;

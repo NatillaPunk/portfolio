@@ -50,21 +50,40 @@ a:hover{
     width: 100vw;
     height: fit-content;
     @include mixins.gradient(to bottom, variables.$background-primary-color, variables.$background-secondary-color);
-    @include mixins.flex-left-top;
+    @include mixins.flex-center-top;
 
     .layout-profile-summary {
-        width: 50%;
+        width: 40%;
         height: 90vh;
-        gap: 0%;
-        
+        gap: 0;
         @include mixins.flex-center;
 
-        div {
-            width: 100%;
-            padding: 2%;
-            @include mixins.flex-center;
+        .layout-profile-info{
+            width: 70%;
+            gap: 10px;
+            @include mixins.flex-left-center;
+            
+            
             *{
-                padding: auto;
+                text-align: left;
+                width: 100%;
+                
+            }
+            .profile-img-rounded{
+                border-radius: 100%;
+                max-width: 200px;
+                max-height: 200px;
+            }
+            .icons{
+                    width: 100%;
+                    
+                    padding: 0;
+                    @include mixins.flex-left-center;
+                    *{
+                        width: 30px;
+                        padding: 1%;
+                    }
+                    
             }
         }
         
@@ -73,27 +92,29 @@ a:hover{
     }
     
     .layout-cv-summary{
+        padding-top: 5%;
         width: 50%; 
         height: fit-content;
         overflow-x: hidden;
         @include mixins.flex-center;
 
         .cv-summary-item {
-            width: 90%;
             height: fit-content;
-
-            padding: 5%;
-            @include mixins.flex-center;
+            @include mixins.flex-left-top;
 
             * {
             width: 100%;
             height: fit-content;
             padding: 2%;
-            @include mixins.flex-center;
+            align-self: flex-start;
             
             }
         }
     }
 }
+
+
+
+
 
 
