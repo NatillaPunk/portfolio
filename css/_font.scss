@@ -2,7 +2,6 @@
 
 //Font and text styles
 
-
 @mixin text-important {
     color: variables.$text-primary-color;
     font-style: oblique;
@@ -17,10 +16,12 @@
 
 @mixin nav-text {
     color: variables.$text-secondary-color;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 3px;
     text-decoration: none;
     text-transform: uppercase;
+    @include lato-bold;
 }
 
 
@@ -36,3 +37,64 @@ li{
     @include text-secondary;
 }
 
+// Lato - Google Font
+
+@mixin lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+@mixin lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
