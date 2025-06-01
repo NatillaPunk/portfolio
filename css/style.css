@@ -88,10 +88,22 @@ section {
 .section-landing-page .layout-profile-summary {
   width: 50%;
   height: 90vh;
+  gap: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+.section-landing-page .layout-profile-summary div {
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.section-landing-page .layout-profile-summary div * {
+  padding: auto;
 }
 .section-landing-page .layout-cv-summary {
   width: 50%;
@@ -104,7 +116,8 @@ section {
 }
 .section-landing-page .layout-cv-summary .cv-summary-item {
   width: 90%;
-  height: 30vh;
+  height: fit-content;
+  padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +126,7 @@ section {
 .section-landing-page .layout-cv-summary .cv-summary-item * {
   width: 100%;
   height: fit-content;
+  padding: 2%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -45,9 +45,20 @@ section {
     .layout-profile-summary {
         width: 50%;
         height: 90vh;
-        ;
+        gap: 0%;
         
         @include mixins.flex-center;
+
+        div {
+            width: 100%;
+            padding: 2%;
+            @include mixins.flex-center;
+            *{
+                padding: auto;
+            }
+        }
+        
+        
         
     }
     
@@ -59,12 +70,15 @@ section {
 
         .cv-summary-item {
             width: 90%;
-            height: 30vh;
+            height: fit-content;
+
+            padding: 5%;
             @include mixins.flex-center;
 
             * {
             width: 100%;
             height: fit-content;
+            padding: 2%;
             @include mixins.flex-center;
             
             }
