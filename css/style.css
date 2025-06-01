@@ -75,8 +75,13 @@ section {
   height: fit-content;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .section-2 {
-  height: 50vh;
+  height: 25vh;
+  background-color: black;
 }
 
 .section-landing-page {
