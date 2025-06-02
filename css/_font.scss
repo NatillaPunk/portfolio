@@ -97,8 +97,9 @@
 
 .text-focus{
   @include mixins.gradient(to right, variables.$icon-primary-color, variables.$icon-secondary-color);
-  background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   @include lato-bold;
 }
 

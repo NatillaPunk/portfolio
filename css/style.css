@@ -8,8 +8,9 @@
 .text-focus {
   background-color: #781BE2;
   background: linear-gradient(to right, #781BE2, #956FC0);
-  background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;

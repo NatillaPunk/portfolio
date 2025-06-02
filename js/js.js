@@ -55,28 +55,24 @@ document.querySelector('.layout-navbar').addEventListener('click', function(Even
     let target = Event.target;
     switch (target.id) {
         case 'navLinkHome':
-            console.log("Home clicked");
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
             break;
         case 'navLinkSkills':
-            console.log("Skills clicked");
             window.scrollTo({
                 top: document.getElementById('skills-section').offsetTop - nav_size,
                 behavior: 'smooth'
             });
             break;
         case 'navLinkExperience':
-            console.log("Experience clicked");
             window.scrollTo({
                 top: document.getElementById('experience-section').offsetTop - nav_size,
                 behavior: 'smooth'
             });
             break;
         case 'navLinkContact':
-            console.log("Contact clicked");
             window.scrollTo({
                 top: document.getElementById('contact-section').offsetTop - nav_size,
                 behavior: 'smooth'
