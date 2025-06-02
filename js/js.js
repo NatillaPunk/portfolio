@@ -1,3 +1,5 @@
+    
+
 //Sticky Profile Summary
 const nav_size = document.querySelector('.layout-navbar').offsetHeight;
 const profile_summary = document.querySelector('.layout-profile-summary');
@@ -44,7 +46,6 @@ document.querySelector('.layout-navbar').addEventListener('click', function(Even
     }
     
 
-    console.log(window.scrollY); 
 });
 
 
@@ -54,11 +55,6 @@ document.querySelector('.layout-navbar').addEventListener('click', function(Even
 
 
 
-
-profile_summary.addEventListener('click', test)
-function test() {
-    console.log("Test",nav_size);
-}
 
 
 

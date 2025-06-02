@@ -204,5 +204,15 @@ a:hover {
   padding: 2%;
   align-self: flex-start;
 }
+.section-landing-page .layout-cv-summary .cv-summary-item .icons-experience {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.section-landing-page .layout-cv-summary .cv-summary-item .icons-experience * {
+  width: 13%;
+}
 
 /*# sourceMappingURL=style.css.map */

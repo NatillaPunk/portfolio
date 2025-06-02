@@ -74,17 +74,17 @@ a:hover{
                 max-width: 200px;
                 max-height: 200px;
             }
-            .icons{
-                    width: 100%;
-                    
-                    padding: 0;
-                    @include mixins.flex-left-center;
-                    *{
-                        width: 30px;
-                        padding: 1%;
-                    }
-                    
-            }
+                .icons{
+                        width: 100%;
+                        
+                        padding: 0;
+                        @include mixins.flex-left-center;
+                        *{
+                            width: 30px;
+                            padding: 1%;
+                        }
+                        
+                }
         }
         
         
@@ -109,10 +109,19 @@ a:hover{
             align-self: flex-start;
             
             }
+            .icons-experience{
+                width: 100%;
+                @include mixins.flex-center;
+                *{
+                    
+                    width: 13%;
+                }
+
+            }
+
         }
     }
 }
-
 
 
 
