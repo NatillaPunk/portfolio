@@ -1,27 +1,28 @@
 
 
+const nav_size = document.querySelector('.layout-navbar').offsetHeight;
+const profile_summary = document.querySelector('.layout-profile-summary');
+
 
 //Sticky Profile Summary
-
-
-
-
 
 function setSticky(){
 const window_width = window.innerWidth;
 if (window_width > 768) {
-    const nav_size = document.querySelector('.layout-navbar').offsetHeight;
-    const profile_summary = document.querySelector('.layout-profile-summary');
-
+    
     profile_summary.style.position = 'sticky';
     profile_summary.style.top = `${nav_size}px`;
 }
+else{
+    profile_summary.style.position = '';
+    profile_summary.style.top = ``;
+}
 
+console.log("Window Size",window_width)
 }
 
 
-document.addEventListener('DOMContentLoaded', setSticky())
-document.addEventListener('resize', setSticky())
+
 
 
 
@@ -62,13 +63,14 @@ document.querySelector('.layout-navbar').addEventListener('click', function(Even
             break;
     }
     
-
+    
 });
 
 
 
 
-
+document.addEventListener('DOMContentLoaded', setSticky)
+window.addEventListener('resize', setSticky)
 
 
 
