@@ -103,6 +103,11 @@
   @include lato-bold;
 }
 
+.no-select {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE/Edge */
+}
 
 
 
