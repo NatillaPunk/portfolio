@@ -1,61 +1,17 @@
-// Utility Imports
 @use 'mixins';
 @use 'variables';
 @use 'font';
 
-// Media Queries Imports
-@use 'mobile';
 
-// Layout Imports
-@use 'navbar';
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
-}
-
-html{
-    overscroll-behavior-y: none;
-}
-
-
-body {
-    
-
-    @include mixins.flex-center;
-}
-
-// General Section Styles
-section {
-    width: 100vw;
-    height: fit-content;
-    
-}
-
-a:hover{
-    cursor: pointer;
-}
-//---------------------------------------------------------------------------------------
-
-
-
-
-
+@media (max-width: 767px) {
+  
 
 .section-landing-page{
-    // @include mixins.flex-center;
-
-    width: 100vw;
-    height: fit-content;
-    @include mixins.gradient(to bottom, variables.$background-primary-color, variables.$background-secondary-color);
+    width: 100%;
     @include mixins.flex-center-top;
 
     .layout-profile-summary {
-        width: 40%;
-        height: 90vh;
-        gap: 0;
+        width: 100%;
         @include mixins.flex-center;
 
         .layout-profile-info{
@@ -124,47 +80,4 @@ a:hover{
         }
     }
 }
-
-
-
-//footer
-.footer-section{
-    height: fit-content;
-    background-color: variables.$menu-primary-color;
-    padding: 2%;
-    
-    gap: 20%;
-
-    @include mixins.flex-center;
-
-    *{
-        height: fit-content;
-    }
-
-    >:nth-child(1){
-        width: 20%;
-        gap: 5px;
-        @include mixins.flex-left-center;
-        .icons{
-            width: 100%;  
-            @include mixins.flex-left-center;
-            *{
-                
-                width: clamp(20px, 3vw, 80px);
-                padding: 1%;
-            }
-                        
-            }
-    }
-    >:nth-child(2){
-        gap: 5px;
-        @include mixins.flex-left-center;
-        width: 40%;
-    }
-    >:nth-child(3){
-        
-        padding-top: 2%;
-        width: 80%;
-        text-align: center;
-    }
 }
