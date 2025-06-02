@@ -166,11 +166,12 @@
             
             
 
-            width: 60%;
+            width: 40%;
             height: fit-content;
             list-style: none;
             // padding-top: 8vh;
-            // padding-bottom: 80vh;
+            // // padding-bottom: 80vh;
+            // background-color: #0e1024;
             @include mixins.flex-right-center;
             
             li{
@@ -190,6 +191,16 @@
             .menu-toggler{
                 width: 30%;
                 display: none;
+                justify-content: right;
+                align-items: center;
+                padding: 4%;
+                img{
+                    width: clamp(2rem,1vw, 8rem);
+                    padding-right: 10px;
+                }
+                img:hover{
+                    cursor: pointer;
+                }
             }
 
         }
@@ -197,6 +208,7 @@
         .menu-container{
             position: fixed;
             height: fit-content;
+            background-color: #0e1024;
             li{
                 display: block;
                 width: 100%;

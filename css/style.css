@@ -410,7 +410,7 @@ a:hover {
     flex-flow: row wrap;
   }
   .layout-navbar .layout-menu ul {
-    width: 60%;
+    width: 40%;
     height: fit-content;
     list-style: none;
     display: flex;
@@ -437,10 +437,21 @@ a:hover {
   .layout-navbar .layout-menu ul .menu-toggler {
     width: 30%;
     display: none;
+    justify-content: right;
+    align-items: center;
+    padding: 4%;
+  }
+  .layout-navbar .layout-menu ul .menu-toggler img {
+    width: clamp(2rem, 1vw, 8rem);
+    padding-right: 10px;
+  }
+  .layout-navbar .layout-menu ul .menu-toggler img:hover {
+    cursor: pointer;
   }
   .layout-navbar .layout-menu .menu-container {
     position: fixed;
     height: fit-content;
+    background-color: #0e1024;
   }
   .layout-navbar .layout-menu .menu-container li {
     display: block;
