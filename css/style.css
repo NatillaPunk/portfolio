@@ -20,7 +20,7 @@
 }
 
 .text-normal {
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .text-large {
@@ -41,7 +41,7 @@
 
 h2 {
   letter-spacing: 3px;
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
   color: #FFFFFF;
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -129,11 +129,6 @@ a:hover {
   cursor: pointer;
 }
 
-.section-2 {
-  height: 25vh;
-  background-color: black;
-}
-
 .section-landing-page {
   width: 100vw;
   height: fit-content;
@@ -178,14 +173,16 @@ a:hover {
   flex-flow: row wrap;
 }
 .section-landing-page .layout-profile-summary .layout-profile-info .icons * {
-  width: 30px;
+  width: clamp(20px, 3vw, 80px);
   padding: 1%;
 }
 .section-landing-page .layout-cv-summary {
   padding-top: 5%;
+  padding-bottom: 5%;
   width: 50%;
   height: fit-content;
   overflow-x: hidden;
+  gap: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,7 +198,7 @@ a:hover {
 .section-landing-page .layout-cv-summary .cv-summary-item * {
   width: 100%;
   height: fit-content;
-  padding: 2%;
+  padding: 1%;
   align-self: flex-start;
 }
 .section-landing-page .layout-cv-summary .cv-summary-item .icons-experience {
@@ -213,6 +210,52 @@ a:hover {
 }
 .section-landing-page .layout-cv-summary .cv-summary-item .icons-experience * {
   width: 13%;
+}
+
+.footer-section {
+  height: fit-content;
+  background-color: #190F34;
+  padding: 2%;
+  gap: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.footer-section * {
+  height: fit-content;
+}
+.footer-section > :nth-child(1) {
+  width: 20%;
+  gap: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.footer-section > :nth-child(1) .icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.footer-section > :nth-child(1) .icons * {
+  width: clamp(20px, 3vw, 80px);
+  padding: 1%;
+}
+.footer-section > :nth-child(2) {
+  gap: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 40%;
+}
+.footer-section > :nth-child(3) {
+  padding-top: 2%;
+  width: 80%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
