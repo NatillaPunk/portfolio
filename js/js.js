@@ -26,7 +26,7 @@ if (window_width >= 768) {
 else{
     profile_summary.style.position = '';
     profile_summary.style.top = ``;
-    document.querySelector('.menu-toggler').style.display = 'block';
+    document.querySelector('.menu-toggler').style.display = 'flex';
     
     
 
@@ -38,14 +38,23 @@ else{
 
 document.querySelector('.menu-toggler').addEventListener('click',function hamburguer_menu() {
     document.querySelector('.menu').classList.toggle('menu-container');
-    document.querySelector('.menu-container').style.top = `${nav_size}px`;
+    document.querySelector('.menu-container').style.top = 0;
 
 })
 
 
 
 
+document.addEventListener('click',function close_menu(Event){
+    let nav = document.querySelector('.layout-navbar');
 
+    if (!nav.contains(event.target)) {
+        document.querySelector('.menu').classList.remove('menu-container');
+  }
+
+    
+
+})
 
 
 
@@ -90,6 +99,7 @@ function test(){
 
 
 document.addEventListener('DOMContentLoaded', setSticky, getNavSize)
+
 window.addEventListener('resize', setSticky)
 window.addEventListener('resize', getNavSize)
 
