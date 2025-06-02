@@ -262,7 +262,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .section-landing-page {
     display: flex;
     justify-content: center;
@@ -390,6 +390,65 @@ a:hover {
   }
   .icon-img:hover {
     cursor: pointer;
+  }
+  .layout-navbar {
+    width: 100vw;
+    height: 10vh;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+  }
+  .layout-navbar .layout-menu {
+    width: 100%;
+    height: 10vh;
+    background-color: #1B0B47;
+    background: linear-gradient(to bottom, #1B0B47, #190F34);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .layout-navbar .layout-menu ul {
+    width: 60%;
+    height: fit-content;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .layout-navbar .layout-menu ul li {
+    display: none;
+    text-align: center;
+  }
+  .layout-navbar .layout-menu ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 150%;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .layout-navbar .layout-menu ul .menu-toggler {
+    width: 30%;
+    display: none;
+  }
+  .layout-navbar .layout-menu .menu-container {
+    position: fixed;
+    height: fit-content;
+  }
+  .layout-navbar .layout-menu .menu-container li {
+    display: block;
+    width: 100%;
+    padding: 4%;
+    text-align: right;
+    background-color: #0e1024;
+    border-radius: 1px;
+    box-shadow: #4D1C86 0px 1px 0px 0px;
   }
 }
 
