@@ -13,7 +13,14 @@
     
 }
 
+html{
+    overscroll-behavior-y: none;
+}
+
+
 body {
+    
+
     @include mixins.flex-center;
 }
 
@@ -24,11 +31,11 @@ section {
     
 }
 
-
-//---------------------------------------------------------------------------------------
-.section-2{
-    height: 50vh;
+a:hover{
+    cursor: pointer;
 }
+//---------------------------------------------------------------------------------------
+
 
 
 
@@ -40,36 +47,121 @@ section {
     width: 100vw;
     height: fit-content;
     @include mixins.gradient(to bottom, variables.$background-primary-color, variables.$background-secondary-color);
-    @include mixins.flex-left-top;
+    @include mixins.flex-center-top;
 
     .layout-profile-summary {
-        width: 50%;
+        width: 40%;
         height: 90vh;
-        ;
-        
+        gap: 0;
         @include mixins.flex-center;
+
+        .layout-profile-info{
+            width: 70%;
+            gap: 10px;
+            @include mixins.flex-left-center;
+            
+            
+            *{
+                text-align: left;
+                width: 100%;
+                
+            }
+            .profile-img-rounded{
+                border-radius: 100%;
+                max-width: 200px;
+                max-height: 200px;
+            }
+                .icons{
+                        width: 100%;
+                        
+                        padding: 0;
+                        @include mixins.flex-left-center;
+                        *{
+                            width: clamp(20px, 3vw, 80px);
+                            padding: 1%;
+                        }
+                        
+                }
+        }
+        
+        
         
     }
     
     .layout-cv-summary{
+        padding-top: 5%;
+        padding-bottom: 5%;
         width: 50%; 
         height: fit-content;
         overflow-x: hidden;
+        gap: 40px;
         @include mixins.flex-center;
 
         .cv-summary-item {
-            width: 90%;
-            height: 30vh;
-            @include mixins.flex-center;
+            height: fit-content;
+            @include mixins.flex-left-top;
 
             * {
             width: 100%;
             height: fit-content;
-            @include mixins.flex-center;
+            padding: 1%;
+            align-self: flex-start;
             
             }
+            .icons-experience{
+                width: 100%;
+                @include mixins.flex-center;
+                *{
+                    
+                    width: 13%;
+                }
+
+            }
+
         }
     }
 }
 
 
+
+//footer
+.footer-section{
+    height: fit-content;
+    background-color: variables.$menu-primary-color;
+    padding: 2%;
+    
+    gap: 20%;
+
+    @include mixins.flex-center;
+
+    *{
+        height: fit-content;
+    }
+
+    >:nth-child(1){
+        width: 20%;
+        gap: 5px;
+        @include mixins.flex-left-center;
+        .icons{
+            width: 100%;  
+            @include mixins.flex-left-center;
+            *{
+                
+                width: clamp(20px, 3vw, 80px);
+                padding: 1%;
+            }
+                        
+            }
+    }
+    >:nth-child(2){
+        gap: 5px;
+        @include mixins.flex-left-center;
+        width: 40%;
+    }
+    >:nth-child(3){
+        
+        padding-top: 2%;
+        width: 80%;
+        text-align: center;
+    }
+}

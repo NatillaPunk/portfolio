@@ -1,14 +1,78 @@
 @use 'variables';
-
+@use 'mixins';
 //Font and text styles
 
+// Lato - Google Font
 
-@mixin text-important {
-    color: variables.$text-primary-color;
-    font-style: oblique;
-    font-size: 1.2rem;
-    font-weight: 600;
+@mixin lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
+
+@mixin lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+@mixin lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+// General fonts
+
+@mixin text-primary {
+    color: variables.$text-primary-color;
+    @include lato-bold;
+}
+
 
 
 @mixin text-secondary {
@@ -16,23 +80,100 @@
 }
 
 @mixin nav-text {
-    color: variables.$text-secondary-color;
-    font-size: 1rem;
-    font-weight: 600;
+    color: variables.$text-primary-color;
+    line-height: 150%;
+    letter-spacing: 3px;
     text-decoration: none;
     text-transform: uppercase;
+    @include lato-bold;
 }
 
 
+
+
+.text-resalt{
+  @include text-primary;
+}
+
+.text-focus{
+  @include mixins.gradient(to right, variables.$icon-primary-color, variables.$icon-secondary-color);
+  background-clip: text;
+  color: transparent;
+  @include lato-bold;
+}
+
+
+
+
+
+// text sizes
+
+@mixin text-small{
+  font-size: clamp(0.5rem, 2vw, 1rem);
+}
+@mixin text-normal{
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+@mixin text-large{
+  font-size: clamp(1.5rem, 6vw, 2rem);
+}
+@mixin text-extra-large{
+  font-size: clamp(2rem, 1vw, 2.5rem);
+}
+
+// Text sizes classes
+.text-small{
+  @include text-small;
+}
+.text-normal{
+  @include text-normal;
+}
+.text-large{
+  @include text-large;
+}
+.text-extra-large{
+  @include text-extra-large;
+}
+
+// Text Formatting
+
+@mixin spacing-3{
+  letter-spacing: 3px; 
+}
+
+@mixin no-letter-spacing{
+  letter-spacing: 0px;
+}
+
+
+.spacing-3{
+  @include spacing-3;
+}
+
+.no-letter-spacing{
+  @include no-letter-spacing;
+}
+
+
+
+
+
+// Specific element fonts
+
 h2 {
-    @include text-important;
+  @include spacing-3; 
+  @include text-normal;
+  @include text-primary;
 }
 
 p {
+    
     @include text-secondary;
+    @include text-small;
+    @include lato-regular;
 }
 
-li{
-    @include text-secondary;
+a{
+  @include text-small;
 }
 
