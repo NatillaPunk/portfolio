@@ -258,6 +258,10 @@ a:hover {
   text-align: center;
 }
 
+.icon-img:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .section-landing-page {
     display: flex;
