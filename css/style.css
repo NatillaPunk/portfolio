@@ -60,85 +60,6 @@ a {
   font-size: clamp(0.5rem, 2vw, 1rem);
 }
 
-@media (max-width: 767px) {
-  .section-landing-page {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: top;
-  }
-  .section-landing-page .layout-profile-summary {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  .section-landing-page .layout-profile-summary .layout-profile-info {
-    width: 70%;
-    gap: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  .section-landing-page .layout-profile-summary .layout-profile-info * {
-    text-align: left;
-    width: 100%;
-  }
-  .section-landing-page .layout-profile-summary .layout-profile-info .profile-img-rounded {
-    border-radius: 100%;
-    max-width: 200px;
-    max-height: 200px;
-  }
-  .section-landing-page .layout-profile-summary .layout-profile-info .icons {
-    width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  .section-landing-page .layout-profile-summary .layout-profile-info .icons * {
-    width: clamp(20px, 3vw, 80px);
-    padding: 1%;
-  }
-  .section-landing-page .layout-cv-summary {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    width: 50%;
-    height: fit-content;
-    overflow-x: hidden;
-    gap: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  .section-landing-page .layout-cv-summary .cv-summary-item {
-    height: fit-content;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-flow: row wrap;
-  }
-  .section-landing-page .layout-cv-summary .cv-summary-item * {
-    width: 100%;
-    height: fit-content;
-    padding: 1%;
-    align-self: flex-start;
-  }
-  .section-landing-page .layout-cv-summary .cv-summary-item .icons-experience {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  .section-landing-page .layout-cv-summary .cv-summary-item .icons-experience * {
-    width: 13%;
-  }
-}
 nav {
   width: 100vw;
   height: 10vh;
@@ -335,6 +256,137 @@ a:hover {
   padding-top: 2%;
   width: 80%;
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .section-landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .section-landing-page .layout-profile-summary {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .section-landing-page .layout-profile-summary .layout-profile-info {
+    width: 70%;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .section-landing-page .layout-profile-summary .layout-profile-info * {
+    text-align: center;
+    width: 100%;
+  }
+  .section-landing-page .layout-profile-summary .layout-profile-info .profile-img-rounded {
+    border-radius: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .section-landing-page .layout-profile-summary .layout-profile-info .icons {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .section-landing-page .layout-profile-summary .layout-profile-info .icons * {
+    width: clamp(30px, 3vw, 80px);
+    padding: 1%;
+  }
+  .section-landing-page .layout-cv-summary {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+    height: fit-content;
+    overflow-x: hidden;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .section-landing-page .layout-cv-summary .cv-summary-item {
+    height: fit-content;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .section-landing-page .layout-cv-summary .cv-summary-item * {
+    width: 100%;
+    height: fit-content;
+    padding: 1%;
+    align-self: flex-start;
+  }
+  .section-landing-page .layout-cv-summary .cv-summary-item .icons-experience {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .section-landing-page .layout-cv-summary .cv-summary-item .icons-experience * {
+    width: 13%;
+  }
+  .footer-section {
+    height: fit-content;
+    background-color: #190F34;
+    padding: 2%;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .footer-section * {
+    height: fit-content;
+  }
+  .footer-section > :nth-child(1) {
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .footer-section > :nth-child(1) .icons {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .footer-section > :nth-child(1) .icons * {
+    width: clamp(20px, 3vw, 80px);
+    padding: 0;
+  }
+  .footer-section > :nth-child(2) {
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .footer-section > :nth-child(3) {
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+  }
+  .icon-img:hover {
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
